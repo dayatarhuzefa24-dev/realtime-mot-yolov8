@@ -1,7 +1,5 @@
-ultralytics==8.2.32
-supervision==0.20.0
-opencv-python-headless==4.9.0.80
-streamlit==1.35.0
-numpy==1.26.4
-torch==2.3.0
-torchvision==0.18.0
+ultralytics
+supervision
+opencv-python-headless
+streamlit
+numpy

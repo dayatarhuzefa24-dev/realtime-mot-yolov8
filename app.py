@@ -47,7 +47,7 @@ if uploaded_file:
         class_placeholder = st.empty()
 
     if st.button("🚀 Start Tracking Execution", use_container_width=True):
-        tracker = sv.ByteTrack(track_thresh=conf_thresh, match_thresh=iou_thresh, track_buffer=30, frame_rate=30)
+        tracker = sv.ByteTrack(track_activation_threshold=conf_thresh, minimum_matching_threshold=iou_thresh)
         cap = cv2.VideoCapture(tfile.name)
         width, height = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps = int(cap.get(cv2.CAP_PROP_FPS)) or 30

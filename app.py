@@ -94,7 +94,7 @@ if uploaded_file:
                 frame = label_annotator.annotate(scene=frame, detections=detections, labels=labels)
             
             out.write(frame)
-            st_frame.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), channels="RGB", use_column_width=True)
+            st_frame.image(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), channels="RGB", use_container_width=True)
             fps_metric.metric("Speed", f"{instant_fps:.1f} FPS")
             targets_metric.metric("Active Targets", f"{len(detections)}")
             
